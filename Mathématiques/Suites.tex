@@ -1,0 +1,187 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{(\emph{\alph{subsubsection}})}
+
+\title{Suites}
+\author{Hugo Lageneste}
+\date{Janvier 2020}
+
+\begin{document}
+
+{Mathématiques - Suites}
+
+\begin{center}
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+ {\huge \bfseries Suites}\\[0.1cm]
+\end{center}
+
+\section{Étude}
+\subsection{Majorée, minorée, bornée}
+
+{Dire que \(\left(u_n\right)\) est majorée (resp. minorée) par un réel \(M\) (resp. \(m\)) c'est \(u_n \leqslant M\) et \(m \leqslant u_n\).}\\
+{Dire que $\left(u_n\right)$ est bornée, c'est dire qu'elle est à la fois majorée et minorée.}
+
+\[m \leqslant u_n \leqslant M\]
+
+\subsection{Arithmétique}
+
+{Soit $\left(u_n\right)$ une suite arithmétique: $u_n = u_0 + nr$.}\\
+{La somme des termes est}
+
+\[S=\frac{(n+1)(u_0+u_n)}{2}\]
+
+\subsection{Géométrique}
+
+{Soit $\left(u_n\right)$ une suite géométrique: $u_n = u_0 \times q^n$.}\\
+{La somme des termes est}
+
+\[S=u_0 \times \frac{1-q^n}{1-q}\]
+
+\section{Limites}
+\subsection{Étude}
+
+{Une limite de suite ne peut être étudiée qu'en $+\infty$.}\\
+{Une suite est convergente si et seulement si elle admet une limite finie, elle est forcément bornée.}\\
+{Ainsi, une suite est divergente si et seulement si elle admet une limite infinie.}
+
+\subsection{Suite géométrique}
+
+Soit un réel $q$:
+\begin{center}
+	{Si $-1 < q < 1$ alors $\lim\limits_{n \rightarrow +\infty} q^n=0$}\\
+	{Si $1 < q$ alors $\lim\limits_{n \rightarrow +\infty} q^n=+\infty$}\\
+	{Si $q \leqslant -1$ alors $\lim\limits_{n \rightarrow +\infty} q^n=\varnothing$}\\
+	{Si $q=1$ alors $\lim\limits_{n \rightarrow +\infty} q^n=1$}
+\end{center}
+
+\subsection{Calcul de limites}
+
+{Soit $\left(u_n\right)$ et $\left(v_n\right)$}\\
+
+\subsubsection{Somme}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} u_n$ & $L$ & $L$ & $L$ & $-\infty$ & $+\infty$ & $+\infty$ \\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} v_n$ & $L\prime$ & $+\infty$ & $-\infty$ & $-\infty$ & $+\infty$ & $-\infty$ \\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} u_n + v_n$ & $L + L\prime$ & $+\infty$ & $-\infty$ & $-\infty$ & $+\infty$ & Indéterminée \\
+  		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{Produit}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} u_n$ & $L$ & $L > 0$ & $L > 0$ & $L < 0$ & $L < 0$ & $+\infty$ & $+\infty$ & $-\infty$ & $0$ \\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} v_n$ & $L\prime$ & $+\infty$ & $-\infty$ & $+\infty$ & $-\infty$ & $+\infty$ & $-\infty$ & $-\infty$ & $-\infty$ ou $-\infty$ \\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} u_n \times v_n$ & $L \times L\prime$ & $+\infty$ & $-\infty$ & $-\infty$ & $+\infty$ & $+\infty$ & $-\infty$ & $+\infty$ & Indéterminée \\
+  		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{Quotient si $\lim\limits_{n \rightarrow +\infty} v_n \neq 0$}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} u_n$ & $L$ & $L$ & $+\infty$ & $+\infty$ & $-\infty$ & $-\infty$ & $-\infty$ ou $-\infty$ \\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} v_n$ & $L \neq 0$ & $-\infty$ ou $-\infty$ & $L\prime > 0$ & $L\prime < 0$ & $L\prime > 0$ & $L\prime < 0$ & $-\infty$ ou $-\infty$\\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} \frac{u_n}{v_n}$ & $\frac{L}{L\prime}$ & $0$ & $+\infty$ & $-\infty$ & $-\infty$ & $+\infty$ & Indéterminée \\
+  		\hline
+	\end{tabular}
+\end{center}
+
+\subsubsection{Quotient si $\lim\limits_{n \rightarrow +\infty} v_n = 0$}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} u_n$ & $L>0$ ou $+\infty$ & $L>0$ ou $+\infty$ & $L<0$ ou $+\infty$ & $L<0$ ou $+\infty$ & $0$ \\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} v_n$ & $0^+$ & $0^-$ & $0^+$ & $0^-$ & $0$ \\
+  		\hline
+  		$\lim\limits_{n \rightarrow +\infty} \frac{u_n}{v_n}$ & $+\infty$ & $-\infty$ & $-\infty$ & $+\infty$ & Indéterminée \\
+  		\hline
+	\end{tabular}
+\end{center}
+
+\section{Comparaison}
+\subsection{Théorème des gendarmes/d'encadrement}
+
+{Soient $\left(u_n\right)$, $\left(v_n\right)$ et $\left(w_n\right)$}\\
+
+{Si} 
+\begin{itemize}
+	\item{$u_n \leqslant v_n \leqslant w_n$}
+	\item{$\left(u_n\right)$ et $\left(w_n\right)$ convergent toutes deux vers $L$}
+\end{itemize}
+
+{Alors $\left(v_n\right)$ converge vers $L$}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+%! \bookmark[document=Ym9va+wCAAAAAAQQMAAAANCToywiuwr7kdOmAUQ+YwNMTuDrqMHq34BjmRbAdtUM6AEAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAEAAAAAQEAAGh1Z28JAAAAAQEAAERvY3VtZW50cwAAAA0AAAABAQAAQmFjY2FsYXVyw6lhdAAAAA8AAAABAQAATWF0aGXMgW1hdGlxdWVzABQAAAABBgAAEAAAACAAAAAsAAAAQAAAAFgAAAAIAAAABAMAAKmPEwAAAAAACAAAAAQDAACujxMAAAAAAAgAAAAEAwAA6H97AAAAAAAIAAAABAMAAAB4vAAAAAAACAAAAAQDAABQyLwAAAAAABQAAAABBgAAjAAAAJwAAACsAAAAvAAAAMwAAAAIAAAAAAQAAEHB7lXkwcFpGAAAAAECAAACAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAMAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAABAQAATWFjaW50b3NoIEhECAAAAAQDAAAAwD9kdAAAAAgAAAAABAAAQcHI2A7qmnAkAAAAAQEAAEMxOTI0NzRGLTA3ODEtNDY2Ni1CNzRDLUZGQjIxQkU3QUQ3MhgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAABwAAAAAAAAAAUQAADcAAAAAAAAABAQAAAIAQAAAAAAAEAQAAD4AAAAAAAAAAIgAADUAQAAAAAAAAUgAABEAQAAAAAAABAgAABUAQAAAAAAABEgAACIAQAAAAAAABIgAABoAQAAAAAAABMgAAB4AQAAAAAAACAgAAC0AQAAAAAAADAgAADgAQAAAAAAAAHAAAAoAQAAAAAAABHAAAAgAAAAAAAAABLAAAA4AQAAAAAAABDQAAAEAAAAAAAAAA==]
