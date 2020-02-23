@@ -1,0 +1,97 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\pgfplotsset{width=6cm,compat=1.9}
+\usepackage{multicol}
+\usepackage{csquotes}
+
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{(\emph{\alph{subsubsection}})}
+
+\title{Dérivation}
+\author{Hugo Lageneste}
+\date{Février 2020}
+
+\begin{document}
+
+{Mathématiques - Dérivation}
+
+\begin{center}
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+ {\huge \bfseries Dérivation}\\[0.1cm]
+\end{center}
+
+\section{Nombre dérivé}
+\subsection{Taux d'accroissement}
+
+{Le taux d'accroissement est défini par}
+
+\[\lim\limits_{h \rightarrow 0}\frac{f(a+h)-f(a)}{h}=f\prime (a)\]
+
+\subsection{Tangente}
+
+{L'équation de la tangente à une courbe représentative de fonction en un point a est définie par}
+
+\[y=f\prime(a)(x-a)+f(a)\]
+
+\section{Fonction dérivée}
+
+\subsection{Dérivées des fonctions usuelles}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+  		\hline
+  		$f(x)$ & $f\prime(x)$ & $D_f$ & $D_{f\prime}$ \\	
+  		\hline
+  		$\lambda$ & $0$ & $\mathbb{R}$ & $\mathbb{R}$ \\
+  		\hline
+  		$x$ & $1$ & $\mathbb{R}$ & $\mathbb{R}$ \\
+  		\hline
+  		$x^n$ $(n \geq 1)$ & $nx^{n-1}$ & $\mathbb{R}$ & $\mathbb{R}$ \\
+  		\hline
+  		$\frac{1}{x^n}$ $(n \geq 1)$ & $-\frac{n}{x^{n+1}}$ & $\mathbb{R}^*$ & $\mathbb{R}^*$ \\
+  		\hline
+  		$\sqrt{x}$ & $\frac{1}{2\sqrt{x}}$ & $\mathbb{R}^+$ & $\mathbb{R}^+*$ \\
+  		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Opérations sur les dérivées}
+\begin{center}
+	\begin{tabular}{|c|c|}
+  		\hline
+  		$f$ & $f\prime$ \\
+  		\hline
+  		$\lambda u$ & $\lambda u\prime$ \\
+  		\hline
+  		$u + v$ & $u\prime + v\prime$ \\
+  		\hline
+  		$uv$ & $u\prime v + uv\prime$ \\
+  		\hline
+  		$\frac{1}{v}$ & $-\frac{v\prime}{v^2}$ \\
+  		\hline
+  		$\frac{u}{v}$ & $\frac{u\prime v - uv\prime}{v^2}$ \\
+  		\hline
+  	\end{tabular}
+\end{center}
+
+\subsection{Dérivées de fonctions composées}
+\begin{center}
+	\begin{tabular}{|c|c|}
+  		\hline
+  		$f$ & $f\prime$ \\
+  		\hline
+  		$u^n$ $(n \geq 1)$ & $nu\prime u^{n-1}$ \\
+  		\hline
+  		$\sqrt{u}$ (si $u(x) > 0$) & $\frac{u\prime}{2\sqrt{u}}$ \\
+  		\hline
+  	\end{tabular}
+\end{center}
+
+\end{document}⏎

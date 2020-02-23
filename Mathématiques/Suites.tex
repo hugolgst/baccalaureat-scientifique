@@ -28,21 +28,25 @@
 \section{Étude}
 \subsection{Majorée, minorée, bornée}
 
-{Dire que \(\left(u_n\right)\) est majorée (resp. minorée) par un réel \(M\) (resp. \(m\)) c'est \(u_n \leqslant M\) et \(m \leqslant u_n\).}\\
-{Dire que $\left(u_n\right)$ est bornée, c'est dire qu'elle est à la fois majorée et minorée.}
+{Dire que \(\left(u_n\right)\) est majorée (resp. minorée) par un réel \(M\) (resp. \(m\)) c'est:}
+
+\begin{center}
+	\(u_n \leqslant M\) (resp. \(m \leqslant u_n\))
+\end{center}
+{Une bornée est majorée et minorée:}
 
 \[m \leqslant u_n \leqslant M\]
 
 \subsection{Arithmétique}
 
-{Soit $\left(u_n\right)$ une suite arithmétique: $u_n = u_0 + nr$.}\\
+{Soit $\left(u_n\right)$ une suite arithmétique définie par $u_n = u_0 + nr$.}\\
 {La somme des termes est}
 
 \[S=\frac{(n+1)(u_0+u_n)}{2}\]
 
 \subsection{Géométrique}
 
-{Soit $\left(u_n\right)$ une suite géométrique: $u_n = u_0 \times q^n$.}\\
+{Soit $\left(u_n\right)$ une suite géométrique définie par $u_n = u_0 \times q^n$.}\\
 {La somme des termes est}
 
 \[S=u_0 \times \frac{1-q^n}{1-q}\]
@@ -51,8 +55,9 @@
 \subsection{Étude}
 
 {Une limite de suite ne peut être étudiée qu'en $+\infty$.}\\
-{Une suite est convergente si et seulement si elle admet une limite finie, elle est forcément bornée.}\\
-{Ainsi, une suite est divergente si et seulement si elle admet une limite infinie.}
+
+{Une suite convergente admet une limite finie. Toute suite convergente est bornée.}\\
+{Ainsi, une suite est divergente si et seulement si elle n'est pas convergente, ou que sa limite est indéterminée.}
 
 \subsection{Suite géométrique}
 
@@ -60,13 +65,13 @@ Soit un réel $q$:
 \begin{center}
 	{Si $-1 < q < 1$ alors $\lim\limits_{n \rightarrow +\infty} q^n=0$}\\
 	{Si $1 < q$ alors $\lim\limits_{n \rightarrow +\infty} q^n=+\infty$}\\
-	{Si $q \leqslant -1$ alors $\lim\limits_{n \rightarrow +\infty} q^n=\varnothing$}\\
+	{Si $q \leqslant -1$ alors $\lim\limits_{n \rightarrow +\infty} q^n$ indéterminée}\\
 	{Si $q=1$ alors $\lim\limits_{n \rightarrow +\infty} q^n=1$}
 \end{center}
 
 \subsection{Calcul de limites}
 
-{Soit $\left(u_n\right)$ et $\left(v_n\right)$}\\
+{Soient $\left(u_n\right)$ et $\left(v_n\right)$}\\
 
 \subsubsection{Somme}
 
@@ -128,13 +133,11 @@ Soit un réel $q$:
 \subsection{Théorème des gendarmes/d'encadrement}
 
 {Soient $\left(u_n\right)$, $\left(v_n\right)$ et $\left(w_n\right)$}\\
-
 {Si} 
 \begin{itemize}
 	\item{$u_n \leqslant v_n \leqslant w_n$}
 	\item{$\left(u_n\right)$ et $\left(w_n\right)$ convergent toutes deux vers $L$}
 \end{itemize}
-
 {Alors $\left(v_n\right)$ converge vers $L$}
 
 \section{Raisonnement par récurrence}

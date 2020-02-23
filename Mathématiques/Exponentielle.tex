@@ -25,7 +25,7 @@
 
 \begin{center}
  \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
- {\huge \bfseries Exponenteille}\\[0.1cm]
+ {\huge \bfseries Exponentielle}\\[0.1cm]
 \end{center}
 
 \section{Propriétés de l'exponentielle}
@@ -36,14 +36,10 @@
 \begin{multicols}{3}
 	\begin{itemize}
   		\item{$\exp{}$ est dérivable sur $\mathbb{R}$}
-  		\item{$\exp{}\prime x=\exp{x}$}
-  		\item{$\exp{0}=1$}
+  		\item{$\left(e^{x}\right)\prime=e^x$}
+  		\item{$e^0=1$}
 	\end{itemize}
 \end{multicols}
-
-\subsection{Propriété}
-
-\[\exp{x+y}=\exp{x} \times \exp{y}\]
 
 \subsection{Signe}
 
@@ -51,7 +47,7 @@
 
 \begin{center}
 	\begin{tikzpicture}
-		\begin{axis}[grid=major,  xmax=5, ymax=3, samples=100, xlabel=$x$, ylabel=$\exp{x}$]
+		\begin{axis}[grid=major,  xmax=4, ymax=3, samples=100, xlabel=$x$, ylabel=$\exp{x}$]
 			\addplot[color=red]{exp(x)};
 		\end{axis}
 	\end{tikzpicture}
@@ -67,9 +63,7 @@
   		\item{$e^x < e^y \Leftrightarrow x < y$}
 	\end{itemize}
 \end{multicols}
-{$\forall x \in \mathbb{R}^{+*}$ et $\forall n \in \mathbb{Z}$:}
-
-{La fonction exponentielle vérifie les règles des puissances}
+{La fonction exponentielle vérifie les règles des puissances}\\
 {$\forall x,y \in \mathbb{R}$ et $\forall n \in \mathbb{Z}$}
 
 \begin{multicols}{4}
@@ -103,15 +97,9 @@
 \end{multicols}
 
 \subsection{Dérivée}
-\subsubsection{Dérivée de $e^x$}
-
-{$\ln{x}$ est dérivable sur $\mathbb{R}$ et}
-
-\[(e^x)\prime=e^x\]
-
 \subsubsection{Dérivée de $e^u$}
 
-{$u$ est une fonction dérivable et strictement positive sur $I$, $eû$ est alors dérivable sur $I$}
+{$u$ est une fonction dérivable et strictement positive sur $I$, $e^u$ est alors dérivable sur $I$}
 
 \[(e^u)\prime(x)=u\prime(x)e^{u(x)}\]
 
