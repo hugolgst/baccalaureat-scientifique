@@ -106,8 +106,8 @@
   		\coordinate[label=below left:$ O $] (O);
   		\fill (3.5,3) coordinate[label=above right:$M$] (z) circle(0.05);
 		\draw[dashed] (0,3) node[left] {$b$} -| (3.5,0) node[below] {$a$};
-		\draw[thick]  (O) to ["$|z|$"] (3.5,3);
-		\pic [draw, <->, angle radius=11mm, angle eccentricity=1.6, "$\arg(z)$"] {angle = x--O--z};
+		\draw[red,thick]  (O) to ["$|z|$"] (3.5,3);
+		\pic [blue,draw, <->, angle radius=11mm, angle eccentricity=1.6, "$\arg(z)$"] {angle = x--O--z};
 	\end{tikzpicture}\\
 	\caption{Représentation de l'angle orienté $(\overrightarrow{u}; \overrightarrow{OM})$ et du vecteur $\overrightarrow{OM}$}
 \end{figure}
